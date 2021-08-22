@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+/* Fundamentals */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'spartan', sans-serif;
+}
+
+main{
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image:url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
+    background-color: hsl(0, 0%, 100%);
+}
+
+/* Utilities */
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Grids */
+#grid{
+    display: grid;
+    grid-template-rows: 250px 280px;
+    grid-template-columns: repeat(2, 50%);
+    height: 600px;
+    width: 1128px;
+    align-content: space-between;
+}
+
+#text{
+    grid-area: 1/1/2/2;
+}
+
+.reviews{
+    grid-area: 1/-1/2/-2;
+}
+
+.card{
+    grid-area: 2/1/3/3;
+}
+
+
+/* Fonts and colors */
+#text h1{
+    font-size: 45px;
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+}
+
+#text p {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 26px;
+    color: hsl(303, 10%, 53%);
+}
+
+.reviews p {
+    font-size: 13px;
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+}
+
+.card h2{
+    font-weight: 500;
+    font-size: 12px;
+    color: hsl(0, 0%, 100%);
+}
+
+.card p{
+    font-size: 13px;
+    line-height: 22px;
+    color: hsl(300, 24%, 96%);
+}
+
+.card .profile p{
+    font-size: 12px;
+    margin-top: 3px;
+    font-weight: 400;
+    color: hsl(333, 80%, 67%);
+}
+
+
+/* Text */
+#text h1 {
+    padding-right: 12rem;
+    margin: 6px 0;
+    letter-spacing: -2px;
+}
+
+#text p {
+    padding-right: 11rem;
+}
+
+
+/* Reviews */
+.reviews {
+    width: 100%;
+    margin: 20px 0 30px;
+    justify-content: space-between;
+}
+
+.reviews p{
+    margin-left: 37px;
+}
+
+.reviews .rvw {
+    display: flex;
+    align-items: center;
+    width: 450px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: hsl(300, 24%, 96%);
+}
+
+.reviews .stars{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 115px;
+}
+
+.reviews .rvw-2{
+    align-self: center;
+}
+
+.reviews .rvw-3{
+    align-self: flex-end;
+}
+
+
+/* Card */
+.card-1, .card-2, .card-3{
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 7px;
+    width: 350px;
+    height: 235px;
+    padding: 2.5rem 2rem 2.5rem;
+    justify-content: space-between;
+}
+
+.card-2{
+    align-self: center;
+}
+
+.card-3{
+    align-self: flex-end;
+}
+
+.card{
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card img{
+    border-radius: 50%;
+    width: 45px;
+}
+
+.profile{
+    height: 45px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile .name{
+    margin-left: 1.5rem;
+}
+
+/* Mobile */
+@media (max-width: 376px) {
+    #grid {
+        grid-template-rows: 230px 320px 735px;
+        grid-template-columns: 310px;
+        width: 310px;
+        height: 1300px;
+        margin: 3rem 0;
+        text-align: center;
+    }
+
+    #text{
+        grid-area: 1/1/2/2;
+    }
+    
+    .reviews{
+        grid-area: 2/1/3/2;
+    }
+    
+    .card{
+        grid-area: 3/1/4/2;
+    }
+
+    /* Fonts */
+    #text h1 {
+        font-size: 33px;
+    }
+
+    #text p {
+        letter-spacing: -1px;
+        line-height: 22px;
+    }
+
+    /* Text */
+    #text h1 {
+        padding: 0 2rem;
+        margin: 6px 0;
+    }
+
+    #text p {
+        padding: 15px 5px 0;
+    }
+
+    /* Review */
+    .reviews {
+        margin: 40px 0;
+    }
+
+    .reviews p{
+        margin: 10px 0 0;
+    }
+
+    .reviews .rvw {
+        flex-direction: column;
+        width: 310px;
+        padding: 15px 10px;
+    }
+
+    /* Card */
+    .card {
+        flex-direction: column;
+    }
+
+    .card-1, .card-2, .card-3{
+        width: 310px;
+        height: 235px;
+        padding: 2.5rem 2rem 2.5rem;
+    }
+}
